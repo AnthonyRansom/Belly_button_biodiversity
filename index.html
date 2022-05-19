@@ -6,24 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 </head>
 
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+      <div class="col-md-12 jumbotron text-center" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0.3) 100%), 
+          url(static/images/860_lab-meat.png); background-position: center center; background-repeat: no-repeat; background-size: 100% 100%; color: black;">
+      <!--<div class="col-md-12 jumbotron text-center" style="background-color: #484848;"> -->
+        <h1><b>Belly Button Biodiversity Dashboard</b></h1>
+        <h2><b>Use the interactive charts below to explore the dataset</b></h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-12" style="text-align: center;">
+        <p style="font-size: 20px;">This following provides a simple inteface to review data releted to each subject ID within the study in order to provide insight
+          into various bacteria found in peoples belly button to determine if a replacement bacteria that tastes like beef is present.<br>
+          By selecting the subject ID will allow the user to review the resulting data for that subject</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2" style="color: black;">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
           <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select class="selectpicker" data-width="100%" id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -32,17 +42,23 @@
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" style="text-align: center;">
         <div id="bar"></div>
+        <p style="font-size: 16px;">Displays the top 10 Bacterial specias (OTU) found for the selected inidvidual ID</p>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" style="text-align: center;">
         <div id="gauge"></div>
+        <p style="font-size: 16px;">Gauges the frequncy which the seleceted individual ID washes thier belly button</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-1"></div>
+      <div class="col-md-10" style="text-align: center;">
         <div id="bubble"></div>
+        <p style="font-size: 16px;">Hover over each marker to get more details<br>
+        Displays the number of bacterial cultures for each sample for the selected individual ID</p>
       </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 

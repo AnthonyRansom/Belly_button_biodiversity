@@ -100,12 +100,14 @@ function buildCharts(sample) {
 
     //Deliverable 2 - Bubble chart
     // 1. Create the trace for the bubble chart.
+    var desired_maximum_marker_size = 200;
     var bubbleData = [{
       x: samplesOTUID,
       y: samplesValues,
       text: samplesLabels,
       mode: 'markers',
-      marker: {size: samplesValues,
+      marker: {
+        size: samplesValues,
         color: samplesOTUID,
         colorscale: 'Earth'
       }
