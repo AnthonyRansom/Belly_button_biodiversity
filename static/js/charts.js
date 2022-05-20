@@ -109,7 +109,8 @@ function buildCharts(sample) {
       marker: {
         size: samplesValues,
         color: samplesOTUID,
-        colorscale: 'Earth'
+        colorscale: 'Earth',
+        sizeref: 1.25
       }
   }];
 
